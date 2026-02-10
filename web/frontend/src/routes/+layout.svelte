@@ -16,3 +16,13 @@
 		<slot />
 	</main>
 </div>
+<script>
+  import { onMount } from "svelte";
+  import { initSocket } from "$lib/stores/socket";
+
+  onMount(() => {
+    initSocket("guest"); // later you can make this dynamic
+  });
+</script>
+
+<slot />
