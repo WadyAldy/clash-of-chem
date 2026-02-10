@@ -4,7 +4,7 @@ import { io } from "socket.io-client";
 export const socket = writable(null);
 
 export function initSocket(username) {
-  const s = io("https://<YOUR-RENDER-APP>.onrender.com", {
+  const s = io("https://chemclash.onrender.com/", {
     transports: ["websocket"],
     auth: {
       username
@@ -15,3 +15,4 @@ export function initSocket(username) {
 
   return s;
 }
+
